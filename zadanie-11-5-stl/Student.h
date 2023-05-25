@@ -18,7 +18,7 @@ public:
 	string album;
 	int rok;
 	Student(string n, string i, string g, string a, int r) :nazwisko(n),imie(i),grupa(g),album(a),rok(r) {};
-	void print();
+	
 	friend std::ostream& operator<<(ostream& os, const Student& s)
 	{
 		os << "Nazwisko: " << s.nazwisko << endl;
@@ -27,6 +27,6 @@ public:
 		os << "Nr albumu: " << s.album << endl;
 		os << "Rok: " << to_string(s.rok) << endl;
 		return os;
-		//print();
+		
 	};
 };
