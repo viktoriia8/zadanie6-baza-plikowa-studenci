@@ -10,8 +10,10 @@
 #include <cassert>
 #include <algorithm>
 #include "Student.h"
+
 using namespace std;
-ifstream& operator<<(ifstream& os, vector<Student>& students) {
+
+/*ifstream& operator<<(ifstream& os, vector<Student>& students) {
     //wczytac studentow
     string nazwisko_;
     string imie_;
@@ -30,7 +32,7 @@ ifstream& operator<<(ifstream& os, vector<Student>& students) {
     cin >> rok_;
     Student f(nazwisko_, imie_, grupa_, album_, rok_);
     students.push_back(f);
-};
+};*/
 
 int main()
 {
@@ -59,7 +61,7 @@ int main()
             if (wybor == 4) h = 0;
         }while(h);
         if (wybor == 1) {
-            cin << students;//??
+           // cin << students;//??
         }
         else if (wybor == 2)  for_each(students.begin(), students.end(), [](Student k)->void {cout << k; });
         else if (wybor == 3) {
